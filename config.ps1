@@ -5,7 +5,7 @@ Write-Host "-------------------------------------------"
 function is_admin
 {
 	$user = [Security.Principal.WindowsIdentity]::GetCurrent();
-	$elevated = (New-Object Security.Principal.WindowsIdentity $user).IsInRole([System.Security.Principal.WindowsBuiltInRole] "Administrator");
+	$elevated = ([System.Security.Principal.WindowsPrincipal]([System.Security.Principal.WindowsIdentity]::GetCurrent())).IsInRole([System.Security.Principal.WindowsBuiltInRole] "Administrator");
 	if (-Not ($elevated))
 	{
 		Write-Warning "Please run this script as an administrator";
