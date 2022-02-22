@@ -20,7 +20,7 @@ Write-Host "Downloading and installing the 'scoop' package-manager..."
 iwr -useb get.scoop.sh | iex
 
 Write-Host "Installing neovim..."
-scoop install nvim
+scoop install neovim
 
 Write-Host "Downloading vim-plug..."
 iwr -useb https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim |`
