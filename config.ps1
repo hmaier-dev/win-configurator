@@ -32,7 +32,7 @@ Write-Host "Downloading init.vim..."
 iwr -useb https://raw.githubusercontent.com/hmaier-ipb/dotfiles/main/.config/nvim/init.vim |`
     ni "$(@($env:XDG_DATA_HOME, $env:LOCALAPPDATA)[$null -eq $env:XDG_DATA_HOME])/nvim/init.vim" -Force
 
-Write-Host "Installing all plugins from init.vim..."
-nvim.exe -Es -c ":PlugInstall" -c ":qa!"
+#Write-Host "Installing nodejs for coc-vim (autocompletion)..."
 
+Write-Host "Thank you for configuring your windows for terminal use!"
 
