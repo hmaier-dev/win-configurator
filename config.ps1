@@ -19,6 +19,8 @@ is_admin
 Write-Host "Downloading and installing the 'scoop' package-manager..." 
 iwr -useb get.scoop.sh | iex
 
+Write-Host "You can deinstall scoop with: del .\scoop -force"
+
 Write-Host "Installing neovim..."
 scoop install neovim
 
