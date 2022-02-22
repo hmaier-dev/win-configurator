@@ -12,8 +12,8 @@ function is_admin
 		Break;
 	}
 }
-
-is_admin();
+# calling is_admin
+is_admin
 
 # Installing the scoop package manager
 Write-Host "Downloading and installing the 'scoop' package-manager..." 
