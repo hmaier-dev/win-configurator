@@ -33,6 +33,7 @@ iwr -useb https://raw.githubusercontent.com/hmaier-ipb/dotfiles/main/.config/nvi
     ni "$(@($env:XDG_DATA_HOME, $env:LOCALAPPDATA)[$null -eq $env:XDG_DATA_HOME])/nvim/init.vim" -Force
 
 #Write-Host "Installing nodejs for coc-vim (autocompletion)..."
+#$app_array = @("ApacheFriends.Xampp")
 
 Write-Host "Thank you for configuring your windows for terminal use!"
 
