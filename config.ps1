@@ -1,25 +1,25 @@
-Write-Host "-------------------------------------------"
-Write-Host "Run this script as Administrator!"
-Write-Host "-------------------------------------------"
+#Write-Host "-------------------------------------------"
+#Write-Host "Run this script as Administrator!"
+#Write-Host "-------------------------------------------"
 
-function is_admin
-{
-	$user = [Security.Principal.WindowsIdentity]::GetCurrent();
-	$elevated = ([System.Security.Principal.WindowsPrincipal]([System.Security.Principal.WindowsIdentity]::GetCurrent())).IsInRole([System.Security.Principal.WindowsBuiltInRole] "Administrator");
-	if (-Not ($elevated))
-	{
-		Write-Warning "Please run this script as an administrator";
-		Break;
-	}
-}
+#function is_admin
+#{
+#	$user = [Security.Principal.WindowsIdentity]::GetCurrent();
+#	$elevated = ([System.Security.Principal.WindowsPrincipal]([System.Security.Principal.WindowsIdentity]::GetCurrent())).IsInRole([System.Security.Principal.WindowsBuiltInRole] "Administrator");
+#	if (-Not ($elevated))
+#	{
+#		Write-Warning "Please run this script as an administrator";
+#		Break;
+#	}
+#}
 # calling is_admin
-is_admin
+#is_admin
 
 # Installing the scoop package manager
-Write-Host "Downloading and installing the 'scoop' package-manager..." 
-iwr -useb get.scoop.sh | iex
+#Write-Host "Downloading and installing the 'scoop' package-manager..." 
+#iwr -useb get.scoop.sh | iex
 
-Write-Host "You can deinstall scoop with: del .\scoop -force"
+#Write-Host "You can deinstall scoop with: del .\scoop -force"
 
 Write-Host "Installing neovim..."
 scoop install neovim
